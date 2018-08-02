@@ -19,11 +19,10 @@ class ApplicationController < Sinatra::Base
     end
     puts @total 
     
-    @combo = cool_generator(@total)
+    @combo = baking_generator(@total)
     if @combo == "not_cool"
       erb :not_cool
     elsif @combo == "cool"
       erb :cool
   end
-  
-end
+
