@@ -10,7 +10,12 @@ class ApplicationController < Sinatra::Base
   get '/' do
     return erb :index
   end
-  
+  get '/quiz' do 
+    return erb :quiz
+  end
+  get '/about' do
+    return erb :about
+  end
   post '/results' do
     answers = params.values 
     @total = 0 
@@ -20,9 +25,18 @@ class ApplicationController < Sinatra::Base
     puts @total 
     
     @combo = baking_generator(@total)
-    if @combo == "not_cool"
-      erb :not_cool
-    elsif @combo == "cool"
-      erb :cool
+    if @combo == "tenMinAlright"
+      erb :tenMinAlright
+    elsif @combo == "tenMinChallenge"
+      erb :tenMinChallenge
+    elsif @combo == "thirtyMinAlright"
+      erb :thirtyMinAlright
+    elsif @combo == "thirtyMinChallenge"
+      erb :thirtyMinChallenge
+    elsif @combo == "hourAlright"
+      erb :hourAlright
+    elsif @combo == "hourChallenge"
+      erb :hourChallenge
+    end 
   end
-
+end 
