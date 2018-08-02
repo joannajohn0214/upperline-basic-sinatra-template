@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Baking Quiz</title>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: center;
+}
+
+li a {
+    display: block;
+    font-family: didot;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+li a:hover {
+    background-color: #111;
+}
+.active {
+    background-color: #ff0094;
+}
+  body{
+    background-color:#ffc1c1;
+    font-family: didot;
+  }
+</style>
+</head>
+<body>
+  <center>
+<img src="https://document-export.canva.com/DAC_IYfJ_6A/72/preview/0001-1620668831.png">
+  </center>
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#about">About Us</a></li>
+  <li><a class="active" href="/">Baking Quiz</a></li>
+</ul>
+  <br>
+  <center>
+      <img src="https://document-export.canva.com/DAC_KKDtQXg/6/preview/0001-1622264440.png">
+    </center>
+    <form action="/results" method="post">
+      
+      <h2>How much time do you have to bake?</h2>
+      <input type="radio" name="time" value="5">5 to 10 mins
+      <br> 
+      <input type="radio" name="time" value="10">10 mins to 1 hour
+      <br>
+      <input type="radio" name="time" value="60">More than 1 hour...aka I have all the time in the world!
+      
+      <h2>What is your skill level in baking?</h2>
+      <input type="radio" name="skill" value="1">I'm alright…
+      <br>
+      <input type="radio" name="skill" value="2">I'm ready to be challenged!
+      <br><br>
+      <button type="submit" class="new">See what wonderful recipes you can make!</button>
+      
+    </form>
+</body>
+</html>

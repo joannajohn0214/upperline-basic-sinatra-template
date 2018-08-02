@@ -10,4 +10,20 @@ class ApplicationController < Sinatra::Base
   get '/' do
     return erb :index
   end
+  
+  post '/results' do
+    answers = params.values 
+    @total = 0 
+    answers.each do |answer|
+      @total += answer.to_i 
+    end
+    puts @total 
+    
+    @combo = cool_generator(@total)
+    if @combo == "not_cool"
+      erb :not_cool
+    elsif @combo == "cool"
+      erb :cool
+  end
+  
 end
